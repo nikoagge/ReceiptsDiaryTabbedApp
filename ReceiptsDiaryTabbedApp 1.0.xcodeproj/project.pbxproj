@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171D31E5229FD9D300F04BFA /* ReceiptsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D31E4229FD9D300F04BFA /* ReceiptsController.swift */; };
+		171D31E7229FE45700F04BFA /* ReceiptsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D31E6229FE45700F04BFA /* ReceiptsCollectionViewCell.swift */; };
 		1724A096229D0B81006974AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724A095229D0B81006974AC /* AppDelegate.swift */; };
 		1724A09D229D0B81006974AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1724A09B229D0B81006974AC /* Main.storyboard */; };
 		1724A0A2229D0B82006974AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1724A0A0229D0B82006974AC /* LaunchScreen.storyboard */; };
 		1724A0B4229D0D49006974AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724A0B3229D0D49006974AC /* MenuController.swift */; };
 		1724A0BA229D7D1F006974AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1724A0B9229D7D1F006974AC /* Assets.xcassets */; };
 		17752783229E82C40051314B /* TypeOfServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17752782229E82C40051314B /* TypeOfServiceCollectionViewCell.swift */; };
+		17CCF75222A02EA200E99CA0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCF75122A02EA200E99CA0 /* DatabaseService.swift */; };
+		E7AAC94B79F467CDFFDC920B /* Pods_ReceiptsDiaryTabbedApp_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E0CC2040B57BA6604E98D3 /* Pods_ReceiptsDiaryTabbedApp_1_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E0CC2040B57BA6604E98D3 /* Pods_ReceiptsDiaryTabbedApp_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReceiptsDiaryTabbedApp_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		171D31E4229FD9D300F04BFA /* ReceiptsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsController.swift; sourceTree = "<group>"; };
+		171D31E6229FE45700F04BFA /* ReceiptsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsCollectionViewCell.swift; sourceTree = "<group>"; };
 		1724A092229D0B81006974AC /* ReceiptsDiaryTabbedApp 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReceiptsDiaryTabbedApp 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1724A095229D0B81006974AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1724A09C229D0B81006974AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		1724A0B3229D0D49006974AC /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		1724A0B9229D7D1F006974AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		17752782229E82C40051314B /* TypeOfServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		17CCF75122A02EA200E99CA0 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		7DA6FB9BB51F81EEDD77BC71 /* Pods-ReceiptsDiaryTabbedApp 1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptsDiaryTabbedApp 1.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptsDiaryTabbedApp 1.0/Pods-ReceiptsDiaryTabbedApp 1.0.debug.xcconfig"; sourceTree = "<group>"; };
+		E1AE98D8646FA477DC368E87 /* Pods-ReceiptsDiaryTabbedApp 1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptsDiaryTabbedApp 1.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptsDiaryTabbedApp 1.0/Pods-ReceiptsDiaryTabbedApp 1.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AAC94B79F467CDFFDC920B /* Pods_ReceiptsDiaryTabbedApp_1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171D31DF229FD90000F04BFA /* Receipts */ = {
+			isa = PBXGroup;
+			children = (
+				171D31E3229FD91A00F04BFA /* Model */,
+				171D31E2229FD91600F04BFA /* View */,
+				171D31E1229FD91000F04BFA /* Controller */,
+				171D31E0229FD90B00F04BFA /* Service */,
+			);
+			path = Receipts;
+			sourceTree = "<group>";
+		};
+		171D31E0229FD90B00F04BFA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		171D31E1229FD91000F04BFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				171D31E4229FD9D300F04BFA /* ReceiptsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		171D31E2229FD91600F04BFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				171D31E6229FE45700F04BFA /* ReceiptsCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		171D31E3229FD91A00F04BFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1724A089229D0B81006974AC = {
 			isa = PBXGroup;
 			children = (
 				1724A094229D0B81006974AC /* ReceiptsDiaryTabbedApp 1.0 */,
 				1724A093229D0B81006974AC /* Products */,
+				23CFD153410DC430A6202F97 /* Pods */,
+				F36DBF1871EE49ADA555D778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +110,8 @@
 		1724A094229D0B81006974AC /* ReceiptsDiaryTabbedApp 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				17CCF74C22A02E6E00E99CA0 /* Database */,
+				171D31DF229FD90000F04BFA /* Receipts */,
 				1724A0AE229D0D20006974AC /* Menu */,
 				1724A0A9229D0C9B006974AC /* Global */,
 			);
@@ -147,6 +203,63 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		17CCF74C22A02E6E00E99CA0 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				17CCF75022A02E8B00E99CA0 /* Model */,
+				17CCF74F22A02E8600E99CA0 /* View */,
+				17CCF74E22A02E8000E99CA0 /* Controller */,
+				17CCF74D22A02E7400E99CA0 /* Service */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		17CCF74D22A02E7400E99CA0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				17CCF75122A02EA200E99CA0 /* DatabaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		17CCF74E22A02E8000E99CA0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		17CCF74F22A02E8600E99CA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17CCF75022A02E8B00E99CA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23CFD153410DC430A6202F97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DA6FB9BB51F81EEDD77BC71 /* Pods-ReceiptsDiaryTabbedApp 1.0.debug.xcconfig */,
+				E1AE98D8646FA477DC368E87 /* Pods-ReceiptsDiaryTabbedApp 1.0.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F36DBF1871EE49ADA555D778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02E0CC2040B57BA6604E98D3 /* Pods_ReceiptsDiaryTabbedApp_1_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1724A0A6229D0B82006974AC /* Build configuration list for PBXNativeTarget "ReceiptsDiaryTabbedApp 1.0" */;
 			buildPhases = (
+				F45C942B4BF6C5A49CF57B21 /* [CP] Check Pods Manifest.lock */,
 				1724A08E229D0B81006974AC /* Sources */,
 				1724A08F229D0B81006974AC /* Frameworks */,
 				1724A090229D0B81006974AC /* Resources */,
+				704432155F7790A9FC9E9C71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,13 +328,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		704432155F7790A9FC9E9C71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptsDiaryTabbedApp 1.0/Pods-ReceiptsDiaryTabbedApp 1.0-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReceiptsDiaryTabbedApp 1.0/Pods-ReceiptsDiaryTabbedApp 1.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F45C942B4BF6C5A49CF57B21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReceiptsDiaryTabbedApp 1.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1724A08E229D0B81006974AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CCF75222A02EA200E99CA0 /* DatabaseService.swift in Sources */,
 				17752783229E82C40051314B /* TypeOfServiceCollectionViewCell.swift in Sources */,
 				1724A0B4229D0D49006974AC /* MenuController.swift in Sources */,
+				171D31E7229FE45700F04BFA /* ReceiptsCollectionViewCell.swift in Sources */,
+				171D31E5229FD9D300F04BFA /* ReceiptsController.swift in Sources */,
 				1724A096229D0B81006974AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +529,7 @@
 		};
 		1724A0A7229D0B82006974AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DA6FB9BB51F81EEDD77BC71 /* Pods-ReceiptsDiaryTabbedApp 1.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,12 +543,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "NAPPS.ReceiptsDiaryTabbedApp-1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1724A0A8229D0B82006974AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1AE98D8646FA477DC368E87 /* Pods-ReceiptsDiaryTabbedApp 1.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "NAPPS.ReceiptsDiaryTabbedApp-1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

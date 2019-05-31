@@ -36,6 +36,8 @@ class MenuController: UIViewController, UICollectionViewDataSource, UICollection
         setupMenuBarButtonItem()
         setupViewsConstraints()
         setupGrabAReceiptImageView()
+        
+        DatabaseService.sharedInstance.connectToDatabase()
     }
     
     
@@ -134,17 +136,23 @@ class MenuController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        grabAReceiptImageView?.contentMode = .scaleAspectFit
-        grabAReceiptImageView?.image = chosenImage
+        
+        //For the original data
+        //guard let chosenImageData = chosenImage.pngData() else { return }
+        
+        //For compressed data, in order not to have so much big data.
+        guard let chosenImageCompressedData = chosenImage.jpegData(compressionQuality: 0.4) else { return }
+        DatabaseService.sharedInstance.insertNewReceiptImageDataRecord(forReceiptImageData: chosenImageCompressedData)
+        //ReceiptsController.sharedInstance.receiptImages = DatabaseService.sharedInstance.getAllImageReceiptData()
         
         dismiss(animated: true, completion: nil)
     }
     
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    @objc func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
         dismiss(animated: true, completion: nil)
     }
